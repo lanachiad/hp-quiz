@@ -11,12 +11,17 @@ class GameLoop extends Component {
     };
   }
 
+  handleScore = () => {
+    this.setState({ score: (this.state.score += 1) });
+  };
+
   render() {
     const allQuestions = AllQuestions.map((question, index) =>
       <Question
         curQuestion={question.question}
         curAnswerChoices={question.answerChoices}
         curCorrect={question.correctAnswer}
+        keepScore={this.handleScore}
         key={index}
       />
     );
