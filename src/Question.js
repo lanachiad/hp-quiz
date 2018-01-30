@@ -21,7 +21,10 @@ class Question extends Component {
   };
 
   checkGuess = guess => {
-    guess === this.state.correctAnswer ? (this.state.guessedCorrectly = true) : (this.state.guessedCorrectly = false);
+    if (guess === this.state.correctAnswer) {
+      this.state.guessedCorrectly = true;
+      this.props.keepScore();
+    }
   };
 
   render() {
