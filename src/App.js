@@ -7,8 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      begin: false,
-      score: 0
+      begin: false
     };
   }
 
