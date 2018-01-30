@@ -6,7 +6,8 @@ class GameLoop extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      totalQuestions: AllQuestions.length
+      totalQuestions: AllQuestions.length,
+      score: 0
     };
   }
 
