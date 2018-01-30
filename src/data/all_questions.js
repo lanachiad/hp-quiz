@@ -16,8 +16,8 @@ export default [
   },
   {
     question: 'How many sickles are in a galleon?',
-    answerChoices: [20, 18, 17, 29, 15],
-    correctAnswer: 17
+    answerChoices: ['20', '18', '17', '29', '15'],
+    correctAnswer: '17'
   },
   {
     question: 'What incantation fixes a broken Vanishing Cabinet?',
