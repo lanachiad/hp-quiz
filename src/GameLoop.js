@@ -27,17 +27,32 @@ class GameLoop extends Component {
 
   handleNextQuestion = () => {
     let i = this.state.index < this.state.allQuestions.length ? (this.state.index += 1) : 0;
+    this.removeLastQuestion();
     this.setState({ index: i });
+  };
+
+  removeLastQuestion = () => {
+    const questionsContainer = document.getElementById('questions-container');
+
+    if (parseInt(questionsContainer.firstChild.id) + 1 === this.state.totalQuestions) {
+      console.log('parseInt(questionsContainer.firstChild.id) + 1 === this.state.totalQuestions');
+      debugger;
+      this.props.endQuiz;
+    } else if (parseInt(questionsContainer.firstChild.id) + 1 < this.state.totalQuestions) {
+      console.log('parseInt(questionsContainer.firstChild.id) < this.state.totalQuestions');
+      debugger;
+      questionsContainer.firstChild.remove();
+    }
   };
 
   render() {
     return (
-      <div>
-        {this.state.allQuestions.slice(0, this.state.index).map(currentQuestion => {
+      <div id="questions-container">
+        {this.state.allQuestions.slice(0, this.state.index).map((currentQuestion, index) => {
           return (
-            <React.Fragment>
+            <div id={index} className="question" key={index}>
               {currentQuestion}
-            </React.Fragment>
+            </div>
           );
         })}
         <button onClick={this.handleNextQuestion}>Next Question</button>
