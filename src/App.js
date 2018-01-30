@@ -22,11 +22,11 @@ class App extends Component {
 
   render() {
     if (this.state.begin === true) {
-      return <GameLoop />;
+      return <GameLoop endQuiz={this.handleQuizEnd} />;
     } else if (this.state.begin === false) {
       return <Welcome beginQuiz={this.handleQuizStart} />;
     } else {
-      return <EndOfQuiz endQuiz={this.handleQuizEnd} />;
+      return <EndOfQuiz />;
     }
   }
 }
