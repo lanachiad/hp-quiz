@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import SubmitGuess from './SubmitGuess';
 
 class Question extends Component {
   constructor(props) {
@@ -7,7 +6,8 @@ class Question extends Component {
     this.state = {
       answered: false,
       correctAnswer: this.props.curCorrect,
-      guess: ''
+      guess: '',
+      guessedCorrectly: false
     };
   }
 
@@ -21,11 +21,7 @@ class Question extends Component {
   };
 
   checkGuess = guess => {
-    if (guess === this.state.correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log('Incorrect!');
-    }
+    guess === this.state.correctAnswer ? (this.state.guessedCorrectly = true) : (this.state.guessedCorrectly = false);
   };
 
   render() {
