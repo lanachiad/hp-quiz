@@ -4,7 +4,6 @@ class Question extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      answered: false,
       correctAnswer: this.props.curCorrect,
       guess: '',
       guessedCorrectly: false
