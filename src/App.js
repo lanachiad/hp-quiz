@@ -3,6 +3,7 @@ import Welcome from './Welcome';
 import GameLoop from './GameLoop';
 import EndOfQuiz from './EndOfQuiz';
 import AllQuestions from './data/all_questions.js';
+import './Universal.css';
 import './App.css';
 
 class App extends Component {
@@ -31,16 +32,26 @@ class App extends Component {
 
   render() {
     if (this.state.begin === true) {
-      return <GameLoop endQuiz={this.handleQuizEnd} />;
+      return (
+        <div class="wrapper">
+          <GameLoop endQuiz={this.handleQuizEnd} />
+        </div>
+      );
     } else if (this.state.begin === false) {
-      return <Welcome beginQuiz={this.handleQuizStart} />;
+      return (
+        <div class="wrapper">
+          <Welcome beginQuiz={this.handleQuizStart} />
+        </div>
+      );
     } else {
       return (
-        <EndOfQuiz
-          summary={this.handleFinalScore}
-          finalScore={this.state.finalScore}
-          totalQuest={this.state.totalNumQuestions}
-        />
+        <div class="wrapper">
+          <EndOfQuiz
+            summary={this.handleFinalScore}
+            finalScore={this.state.finalScore}
+            totalQuest={this.state.totalNumQuestions}
+          />
+        </div>
       );
     }
   }
