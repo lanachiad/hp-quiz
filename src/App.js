@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Welcome from './Welcome';
 import GameLoop from './GameLoop';
 import EndOfQuiz from './EndOfQuiz';
+import AllQuestions from './data/all_questions.js';
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      begin: false
+      begin: false,
+      finalScore: 0,
+      totalNumQuestions: AllQuestions.length
     };
   }
 
@@ -16,8 +19,14 @@ class App extends Component {
     this.setState({ begin: true });
   };
 
-  handleQuizEnd = () => {
-    this.setState({ begin: 'end' });
+  handleQuizEnd = score => {
+    this.setState({ begin: 'end' }, () => {
+      this.handleFinalScore(score);
+    });
+  };
+
+  handleFinalScore = score => {
+    this.setState({ finalScore: score });
   };
 
   render() {
@@ -26,7 +35,13 @@ class App extends Component {
     } else if (this.state.begin === false) {
       return <Welcome beginQuiz={this.handleQuizStart} />;
     } else {
-      return <EndOfQuiz />;
+      return (
+        <EndOfQuiz
+          summary={this.handleFinalScore}
+          finalScore={this.state.finalScore}
+          totalQuest={this.state.totalNumQuestions}
+        />
+      );
     }
   }
 }
