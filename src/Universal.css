@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Harry Potter";
+  src: url("./font/HARRP___.TTF");
+  src: url("./font/HARRP___.TTF") format("tff"), url("./font/HARRP___.TTF") format("truetype");
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.game-wrapper {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 50px;
+}
