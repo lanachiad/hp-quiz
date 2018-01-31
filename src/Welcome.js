@@ -9,7 +9,9 @@ class Welcome extends Component {
         <div className="game-wrapper">
           <h1>Welcome to the Harry Potter Quiz</h1>
           <p>Are you ready to prove yourself a true fan?</p>
-          <button onClick={this.props.beginQuiz}>I'm Ready</button>
+          <button className="button" onClick={this.props.beginQuiz}>
+            I'm Ready
+          </button>
         </div>
       </div>
     );
