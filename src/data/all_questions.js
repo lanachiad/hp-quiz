@@ -23,5 +23,30 @@ export default [
     question: 'What incantation fixes a broken Vanishing Cabinet?',
     answerChoices: ['Harmonia Nectere Passus', 'Anteoculatia', 'Ventus Duo', 'Reparo'],
     correctAnswer: 'Harmonia Nectere Passus'
+  },
+  {
+    question: 'How many Weasley children are there?',
+    answerChoices: ['4', '8', '10', '7', '6'],
+    correctAnswer: '7'
+  },
+  {
+    question: 'What type of dragon did Harry have to face during the Triwizard Tournament?',
+    answerChoices: ['Hungarian Horntail', 'Chinese Fireball', 'Swedish Shortsnout', 'Common Welsh Green'],
+    correctAnswer: 'Hungarian Horntail'
+  },
+  {
+    question: "What is Voldemort's wand made out of?",
+    answerChoices: ['Ash', 'Hawthorn', 'Yew', 'Vine wood'],
+    correctAnswer: 'Yew'
+  },
+  {
+    question: 'What did the Marauders call Snape to make fun of him?',
+    answerChoices: ['Sev', 'Slytherus', 'Prince', 'Snivellus'],
+    correctAnswer: 'Snivellus'
+  },
+  {
+    question: 'All this time?',
+    answerChoices: ['Always'],
+    correctAnswer: 'Always'
   }
 ];
