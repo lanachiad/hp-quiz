@@ -22,11 +22,11 @@ class GameLoop extends Component {
   }
 
   handleScore = () => {
-    this.setState({ score: (this.state.score += 1) });
+    this.setState({ score: this.state.score + 1 });
   };
 
   handleNextQuestion = () => {
-    let i = this.state.index < this.state.allQuestions.length ? (this.state.index += 1) : 0;
+    let i = this.state.index < this.state.allQuestions.length ? this.state.index + 1 : 0;
     this.removeLastQuestion();
     this.setState({ index: i });
   };
@@ -34,13 +34,9 @@ class GameLoop extends Component {
   removeLastQuestion = () => {
     const questionsContainer = document.getElementById('questions-container');
 
-    if (parseInt(questionsContainer.firstChild.id) + 1 === this.state.totalQuestions) {
-      console.log('parseInt(questionsContainer.firstChild.id) + 1 === this.state.totalQuestions');
-      debugger;
-      this.props.endQuiz;
-    } else if (parseInt(questionsContainer.firstChild.id) + 1 < this.state.totalQuestions) {
-      console.log('parseInt(questionsContainer.firstChild.id) < this.state.totalQuestions');
-      debugger;
+    if (Number(questionsContainer.firstChild.id) + 1 === this.state.totalQuestions) {
+      this.props.endQuiz();
+    } else if (Number(questionsContainer.firstChild.id) + 1 < this.state.totalQuestions) {
       questionsContainer.firstChild.remove();
     }
   };
@@ -58,8 +54,6 @@ class GameLoop extends Component {
         <button onClick={this.handleNextQuestion}>Next Question</button>
       </div>
     );
-
-    // return this.state.allQuestions;
   }
 }
 
