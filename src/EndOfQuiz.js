@@ -4,7 +4,7 @@ class EndOfQuiz extends Component {
   render() {
     let result;
 
-    const percentCorrect = this.props.finalScore / this.props.totalQuest * 100;
+    const percentCorrect = Math.round(this.props.finalScore / this.props.totalQuest * 100) / 100;
 
     if (percentCorrect >= 90) {
       result = 'Impressive. You must be a Ravenclaw with wit like that.';
