@@ -15,10 +15,6 @@ class Question extends Component {
     this.setState({ answered: true });
   };
 
-  // onClickGuess = e => {
-  //   this.handleGuess(e);
-  // };
-
   handleGuess = e => {
     this.setState({ guess: e.target.textContent }, () => {
       this.checkGuess(this.state.guess);
