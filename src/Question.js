@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Question.css';
 
 class Question extends Component {
   constructor(props) {
@@ -14,14 +15,20 @@ class Question extends Component {
     this.setState({ answered: true });
   };
 
-  handleGuess = e => {
-    this.setState({ guess: e.target.textContent });
+  onClickGuess = e => {
+    this.handleGuess(e);
     this.checkGuess(this.state.guess);
   };
 
+  handleGuess = e => {
+    this.setState({ guess: e.target.textContent });
+  };
+
   checkGuess = guess => {
-    if (guess === this.state.correctAnswer) {
-      this.state.guessedCorrectly = true;
+    if (guess === this.state.correctAnswer && this.state.guessedCorrectly !== true) {
+      this.setState({
+        guessedCorrectly: true
+      });
       this.props.keepScore();
     }
   };
@@ -34,7 +41,7 @@ class Question extends Component {
         </h2>
         <ol>
           {this.props.curAnswerChoices.map((answerChoice, index) =>
-            <li key={index} onClick={this.handleGuess}>
+            <li className="answer-choice" key={index} onClick={this.onClickGuess}>
               {answerChoice}
             </li>
           )}
