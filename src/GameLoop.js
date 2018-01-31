@@ -43,15 +43,17 @@ class GameLoop extends Component {
 
   render() {
     return (
-      <div id="questions-container">
-        {this.state.allQuestions.slice(0, this.state.index).map((currentQuestion, index) => {
-          return (
-            <div id={index} className="question" key={index}>
-              {currentQuestion}
-            </div>
-          );
-        })}
-        <button onClick={this.handleNextQuestion}>Next Question</button>
+      <div className="game-wrapper">
+        <div id="questions-container">
+          {this.state.allQuestions.slice(0, this.state.index).map((currentQuestion, index) => {
+            return (
+              <div id={index} className="question" key={index}>
+                {currentQuestion}
+              </div>
+            );
+          })}
+          <button onClick={this.handleNextQuestion}>Next Question</button>
+        </div>
       </div>
     );
   }
