@@ -11,13 +11,14 @@
   border: 2px #fff solid;
   border-radius: 10px;
   list-style-type: none;
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
   padding: 10px;
   text-align: center;
+  width: 75%;
 }
 
 .answer-choice:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 .next {
