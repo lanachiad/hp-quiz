@@ -35,7 +35,7 @@ class GameLoop extends Component {
     const questionsContainer = document.getElementById('questions-container');
 
     if (Number(questionsContainer.firstChild.id) + 1 === this.state.totalQuestions) {
-      this.props.endQuiz();
+      this.props.endQuiz(this.state.score);
     } else if (Number(questionsContainer.firstChild.id) + 1 < this.state.totalQuestions) {
       questionsContainer.firstChild.remove();
     }
