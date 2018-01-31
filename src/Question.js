@@ -19,6 +19,8 @@ class Question extends Component {
     this.setState({ guess: e.target.textContent }, () => {
       this.checkGuess(this.state.guess);
     });
+
+    this.removePreviousGuess();
     const selectedChoice = e.target;
     selectedChoice.classList.toggle('selected');
   };
@@ -29,6 +31,15 @@ class Question extends Component {
         guessedCorrectly: true
       });
       this.props.keepScore();
+    }
+  };
+
+  removePreviousGuess = () => {
+    const allAnswers = document.querySelector('.answers').children;
+    for (let i = 0; i < allAnswers.length; i++) {
+      if (allAnswers[i].classList.contains('selected')) {
+        allAnswers[i].classList.remove('selected');
+      }
     }
   };
 
