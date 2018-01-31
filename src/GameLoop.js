@@ -52,7 +52,9 @@ class GameLoop extends Component {
               </div>
             );
           })}
-          <button onClick={this.handleNextQuestion}>Next Question</button>
+          <button className="next button" onClick={this.handleNextQuestion}>
+            Next
+          </button>
         </div>
       </div>
     );

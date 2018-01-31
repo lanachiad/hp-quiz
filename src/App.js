@@ -33,19 +33,19 @@ class App extends Component {
   render() {
     if (this.state.begin === true) {
       return (
-        <div class="wrapper">
+        <div className="wrapper">
           <GameLoop endQuiz={this.handleQuizEnd} />
         </div>
       );
     } else if (this.state.begin === false) {
       return (
-        <div class="wrapper">
+        <div className="wrapper">
           <Welcome beginQuiz={this.handleQuizStart} />
         </div>
       );
     } else {
       return (
-        <div class="wrapper">
+        <div className="wrapper">
           <EndOfQuiz
             summary={this.handleFinalScore}
             finalScore={this.state.finalScore}

@@ -19,6 +19,8 @@ class Question extends Component {
     this.setState({ guess: e.target.textContent }, () => {
       this.checkGuess(this.state.guess);
     });
+    const selectedChoice = e.target;
+    selectedChoice.classList.toggle('selected');
   };
 
   checkGuess = guess => {
@@ -32,18 +34,18 @@ class Question extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h2>
           {this.props.curQuestion}
         </h2>
-        <ol>
+        <ul className="answers">
           {this.props.curAnswerChoices.map((answerChoice, index) =>
             <li className="answer-choice" key={index} onClick={this.handleGuess}>
               {answerChoice}
             </li>
           )}
-        </ol>
-      </div>
+        </ul>
+      </React.Fragment>
     );
   }
 }
