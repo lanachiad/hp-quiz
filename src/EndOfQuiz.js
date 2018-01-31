@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class EndOfQuiz extends Component {
   render() {
     return (
-      <div>
+      <div className="game-wrapper">
         <h2>Quills down, here's how you did</h2>
         <p>
           Final score: {this.props.finalScore}
