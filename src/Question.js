@@ -15,13 +15,14 @@ class Question extends Component {
     this.setState({ answered: true });
   };
 
-  onClickGuess = e => {
-    this.handleGuess(e);
-    this.checkGuess(this.state.guess);
-  };
+  // onClickGuess = e => {
+  //   this.handleGuess(e);
+  // };
 
   handleGuess = e => {
-    this.setState({ guess: e.target.textContent });
+    this.setState({ guess: e.target.textContent }, () => {
+      this.checkGuess(this.state.guess);
+    });
   };
 
   checkGuess = guess => {
@@ -41,7 +42,7 @@ class Question extends Component {
         </h2>
         <ol>
           {this.props.curAnswerChoices.map((answerChoice, index) =>
-            <li className="answer-choice" key={index} onClick={this.onClickGuess}>
+            <li className="answer-choice" key={index} onClick={this.handleGuess}>
               {answerChoice}
             </li>
           )}
