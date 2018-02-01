@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './EndOfQuiz.css';
 
 class EndOfQuiz extends Component {
   render() {
@@ -7,17 +8,17 @@ class EndOfQuiz extends Component {
     const percentCorrect = Math.round(this.props.finalScore / this.props.totalQuest * 10000) / 100;
 
     if (percentCorrect >= 90) {
-      result = 'Impressive. You must be a Ravenclaw with wit like that.';
+      result = 'Impressive. You must be a Ravenclaw with smarts like that.';
     } else if (percentCorrect < 90 && percentCorrect >= 50) {
       result = "You could have done better...but you also could've done worse.";
     } else if (percentCorrect < 50 && percentCorrect >= 25) {
-      result = "I'm sure you have other traits that are worthwhile.";
+      result = 'Wit beyond measure is surely not your treasure.';
     } else {
       result = 'Did you even try the quiz?';
     }
 
     return (
-      <div className="game-wrapper">
+      <div id="end-of-game" className="game-wrapper">
         <h2>Quills down, here's how you did</h2>
         <p>
           Final score: {this.props.finalScore}
