@@ -6,10 +6,12 @@
 .answer-choice {
   border: 2px #fff solid;
   border-radius: 10px;
+  cursor: pointer;
   list-style-type: none;
   margin: 0 auto 25px;
   padding: 10px;
   text-align: center;
+  user-select: none;
   width: 75%;
 }
 
