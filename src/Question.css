@@ -20,8 +20,10 @@
 }
 
 .next {
+  cursor: pointer;
   display: table;
   margin: 0 auto;
+  user-select: none;
 }
 
 .selected {
