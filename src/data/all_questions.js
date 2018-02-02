@@ -40,8 +40,8 @@ export default [
     correctAnswer: 'Hungarian Horntail'
   },
   {
-    question: 'Where was the original headquarters for the Order of the Phoenix?'
-    answerChoices: ['The Burrow', '12 Grimmace Place', '24 Nurmengard Way' '12 Grimmauld Place'],
+    question: 'Where was the original headquarters for the Order of the Phoenix?',
+    answerChoices: ['The Burrow', '12 Grimmace Place', '24 Nurmengard Way', '12 Grimmauld Place'],
     correctAnswer: '12 Grimmauld Place'
   },
   {
