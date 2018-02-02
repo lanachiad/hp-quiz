@@ -4,7 +4,7 @@ Put your Harry Potter knowledge to the test with this fun lil quiz built in Reac
 
 ## Features:
 * Floating candles!
-* Custom results!
+* Sassy Sorting Hat!
 * Magical rendering! (WIP)
 
 ## Credit:
