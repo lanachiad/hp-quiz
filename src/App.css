@@ -13,3 +13,71 @@ body {
   margin: auto;
   width: 750px;
 }
+
+.candle {
+  height: 100px;
+  margin: 175px auto 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 50px;
+}
+
+.candle-height {
+  margin-top: 185px !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.flame {
+  background-color: orange;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 200%;
+  border-top-right-radius: 200%;
+  height: 20px;
+  margin: auto;
+  margin-bottom: -7px;
+  position: relative;
+  width: 11px;
+  z-index: 9999;
+}
+
+.flame:after {
+  background-color: yellow;
+  border-radius: 200%;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 15px;
+  left: 1px;
+  margin: auto;
+  position: absolute;
+  width: 9px;
+}
+
+.wax {
+  background-color: #fff;
+  border: 1px lightgray solid;
+  border-radius: 40px / 20px;
+  height: 70px;
+  margin: auto;
+  width: 25px;
+}
+.wax:after {
+  background-color: #e2e2e2;
+  border-radius: 40px / 20px;
+  content: '';
+  display: block;
+  height: 7px;
+  left: 0;
+  top: 0;
+  width: 25px;
+}
+
+.left {
+  margin-right: 30px;
+}
+
+.right {
+  margin-left: 30px;
+}
