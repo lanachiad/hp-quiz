@@ -6,3 +6,10 @@ Put your Harry Potter knowledge to the test with this fun lil quiz built in Reac
 * Floating candles!
 * Custom results!
 * Magical rendering! (WIP)
+
+## Credit:
+All HP facts from [Harry Potter Wiki](http://harrypotter.wikia.com/wiki/Main_Page).
+
+Sorting hat image from [Harry Potter Wiki article on the Sorting Hat](http://harrypotter.wikia.com/wiki/Sorting_Hat).
+
+Thanks for helping, Ben :)
