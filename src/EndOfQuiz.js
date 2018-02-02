@@ -4,25 +4,43 @@ import SortingHat from './images/sorting_hat.png';
 
 class EndOfQuiz extends Component {
   render() {
-    let result;
+    let grade, result;
 
     const percentCorrect = Math.round(this.props.finalScore / this.props.totalQuest * 10000) / 100;
 
     if (percentCorrect >= 90) {
-      result = 'Impressive. You must be a Ravenclaw with smarts like that.';
-    } else if (percentCorrect < 90 && percentCorrect >= 50) {
-      result = "You could have done better...but you also could've done worse.";
-    } else if (percentCorrect < 50 && percentCorrect >= 25) {
-      result = 'Wit beyond measure is surely not your treasure.';
+      grade = 'Outstanding';
+    } else if (percentCorrect < 90 && percentCorrect >= 80) {
+      grade = 'Exceeds Expectations';
+    } else if (percentCorrect < 80 && percentCorrect >= 70) {
+      grade = 'Acceptable';
+    } else if (percentCorrect < 70 && percentCorrect >= 60) {
+      grade = 'Poor';
+    } else if (percentCorrect < 60 && percentCorrect >= 50) {
+      grade = 'Dreadful';
     } else {
-      result = 'Did you even try the quiz?';
+      grade = 'Troll';
+    }
+
+    if (grade === 'Outstanding') {
+      result = 'Impressive. You must be a Ravenclaw with brains like that.';
+    } else if (grade === 'Exceeds Expectations') {
+      result = 'Exceptional work for a Hufflepuff.';
+    } else if (grade === 'Acceptable') {
+      result = "You could have done better...but you also could've done worse.";
+    } else if (grade === 'Poor') {
+      result = 'Wit beyond measure is surely not your treasure.';
+    } else if (grade === 'Dreadful') {
+      result = 'Maybe you can open a joke shop or something?';
+    } else {
+      result = 'How did a muggle get in here?!';
     }
 
     return (
       <div id="end-of-game" className="game-wrapper">
         <h2>Quills down, here's how you did</h2>
         <p>
-          Final score: {this.props.finalScore}
+          Final O.W.L. Score: <span class="gold">{grade}</span>
         </p>
         <p>
           That's a {percentCorrect}% knowledge of all things Harry Potter.
