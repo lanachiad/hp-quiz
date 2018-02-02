@@ -9,3 +9,36 @@
 #end-of-game p {
   font-size: 16pt;
 }
+
+#sorting-hat {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.hat-wrapper img {
+  height: 200px;
+}
+
+.results-wrapper {
+  align-self: center;
+  background: black;
+  border: 1px #fff solid;
+  border-radius: 10px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.results-wrapper:before {
+  border-bottom: 13px solid transparent;
+  border-right: 26px solid black;
+  border-top: 13px solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+}

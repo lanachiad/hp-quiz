@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './EndOfQuiz.css';
+import SortingHat from './images/sorting_hat.png';
 
 class EndOfQuiz extends Component {
   render() {
@@ -26,9 +27,16 @@ class EndOfQuiz extends Component {
         <p>
           That's a {percentCorrect}% knowledge of all things Harry Potter.
         </p>
-        <p>
-          {result}
-        </p>
+        <div id="sorting-hat">
+          <div className="hat-wrapper">
+            <img src={SortingHat} alt="harry potter sorting hat" />
+          </div>
+          <div className="results-wrapper">
+            <p>
+              {result}
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
