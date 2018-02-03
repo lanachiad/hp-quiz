@@ -45,12 +45,14 @@ export default [
     correctAnswer: '12 Grimmauld Place'
   },
   {
+    question: ''
+  },
+  {
     question: 'Which of these are NOT sweets sold at Honeydukes?',
     answerChoices: [
       'Toothflossing Stringmints',
       'Cockroach Clusters',
       'Pepper Imps',
-      'Acid Pops',
       'Mice Pops',
       'Broomstick Crunches',
       'Fudge Flies'
@@ -71,16 +73,6 @@ export default [
     question: "What is the occupation of Hermione's parents?",
     answerChoices: ['Doctors', 'Dentists', 'Professors', 'Lawyers'],
     correctAnswer: 'Dentists'
-  },
-  {
-    question: 'What is the name of the French wizarding school?',
-    answerChoices: [
-      'Beauxbatons Academy of Magic',
-      'Beauxbarton Academy of Magic',
-      "L'école Français de la Magie",
-      'Beauxbatons Magic Academy'
-    ],
-    correctAnswer: 'Beauxbatons Academy of Magic'
   },
   {
     question: 'What year was Hagrid in when he was expelled from Hogwarts?',
@@ -107,11 +99,6 @@ export default [
     question: "What shape did Seamus Finnigan's boggart take?",
     answerChoices: ['Banshee', 'Bloodstained, bandaged mummy', 'Disembodied living hand', 'Giant cobra', 'Dementor'],
     correctAnswer: 'Banshee'
-  },
-  {
-    question: 'Who was the Quidditch referee?',
-    answerChoices: ['Minerva McGonagall', 'Madam Hooch', 'Oliver Wood', 'Poppy Pomfrey'],
-    correctAnswer: 'Madam Hooch'
   },
   {
     question: 'Where is the Hufflepuff common room located near?',
