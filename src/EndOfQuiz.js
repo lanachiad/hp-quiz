@@ -40,7 +40,7 @@ class EndOfQuiz extends Component {
       <div id="end-of-game" className="game-wrapper">
         <h2>Quills down, here's how you did</h2>
         <p>
-          Final O.W.L. Score: <span class="gold">{grade}</span>
+          Final O.W.L. Score: <span className="gold">{grade}</span>
         </p>
         <p>
           That's a {percentCorrect}% knowledge of all things Harry Potter.
