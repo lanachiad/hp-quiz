@@ -45,9 +45,6 @@ export default [
     correctAnswer: '12 Grimmauld Place'
   },
   {
-    question: ''
-  },
-  {
     question: 'Which of these are NOT sweets sold at Honeydukes?',
     answerChoices: [
       'Toothflossing Stringmints',
