@@ -21,7 +21,7 @@ export default [
   },
   {
     question: 'How many sickles are in a galleon?',
-    answerChoices: ['20', '18', '17', '29', '15'],
+    answerChoices: ['20', '18', '17', '15'],
     correctAnswer: '17'
   },
   {
@@ -31,7 +31,7 @@ export default [
   },
   {
     question: 'How many Weasley children are there?',
-    answerChoices: ['4', '8', '10', '7', '6'],
+    answerChoices: ['8', '10', '7', '6'],
     correctAnswer: '7'
   },
   {
