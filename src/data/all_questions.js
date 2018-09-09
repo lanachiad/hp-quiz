@@ -46,14 +46,7 @@ export default [
   },
   {
     question: 'Which of these are NOT sweets sold at Honeydukes?',
-    answerChoices: [
-      'Toothflossing Stringmints',
-      'Cockroach Clusters',
-      'Pepper Imps',
-      'Mice Pops',
-      'Broomstick Crunches',
-      'Fudge Flies'
-    ],
+    answerChoices: ['Toothflossing Stringmints', 'Cockroach Clusters', 'Pepper Imps', 'Broomstick Crunches'],
     correctAnswer: 'Broomstick Crunches'
   },
   {
@@ -85,7 +78,6 @@ export default [
     question: 'How do you breed a basilisk?',
     answerChoices: [
       'They occur naturally',
-      'Hatch a toad egg underneath a chicken',
       'Hatch a chicken egg underneath a toad',
       'Make a sacrifice in the Chamber of Secrets',
       'Ask Hagrid'
@@ -94,7 +86,7 @@ export default [
   },
   {
     question: "What shape did Seamus Finnigan's boggart take?",
-    answerChoices: ['Banshee', 'Bloodstained, bandaged mummy', 'Disembodied living hand', 'Giant cobra', 'Dementor'],
+    answerChoices: ['Banshee', 'Bloodstained, bandaged mummy', 'Giant cobra', 'Dementor'],
     correctAnswer: 'Banshee'
   },
   {
